@@ -114,7 +114,9 @@ function start2() {
 
 window.onQuartersCallback = function(data){ 
   console.log(data.txId);
-  start();
+  if (data.txId != undefined) {
+	start();
+   }
  }
 
   startBtn.addEventListener( 'click', start2 );
